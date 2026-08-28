@@ -127,6 +127,25 @@
   .award .star{flex:0 0 44px; height:44px; width:44px; border-radius:50%; display:flex; align-items:center;
     justify-content:center; font-size:22px; background:linear-gradient(135deg,var(--gold),#f0c66a); color:#fff;}
 
+  /* ===== TABLA COMPARATIVA ===== */
+  .table-wrap{overflow-x:auto; background:var(--card); border:1px solid var(--border); border-radius:14px;
+    box-shadow:var(--shadow); padding:6px;}
+  .cmp-table{width:100%; border-collapse:collapse; min-width:760px; font-size:.9rem;}
+  .cmp-table th,.cmp-table td{padding:12px 14px; text-align:center; border-bottom:1px solid var(--border);}
+  .cmp-table thead th{background:linear-gradient(135deg,var(--green),var(--teal)); color:#fff; font-weight:700;}
+  .cmp-table thead th:first-child{border-top-left-radius:10px;}
+  .cmp-table thead th:last-child{border-top-right-radius:10px;}
+  .cmp-table tbody tr:nth-child(even){background:var(--green-light);}
+  .cmp-table tbody tr:hover{background:#eaf5f0;}
+  .cmp-table .row-label{text-align:left; font-weight:600; color:var(--green-dark);}
+  .cmp-table .total-row{background:var(--card) !important; font-weight:800; color:var(--green-dark); border-top:2px solid var(--green);}
+  .cmp-table .total-row td{background:transparent;}
+  .today{font-size:.72rem; font-weight:700; padding:2px 8px; border-radius:999px; background:var(--green-light); color:var(--green-dark);}
+  .today.head{background:rgba(255,255,255,.2); color:#fff;}
+  table .highlight{color:var(--gold); font-weight:800;}
+  .legend{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:16px; font-size:.82rem; color:var(--muted);}
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+
   /* ===== PUBLICACIONES ===== */
   .pub{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow);}
   .pub .ptype{font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--teal); margin-bottom:6px;}
@@ -162,6 +181,7 @@
       <li><a href="#por-anio">Por Año</a></li>
       <li><a href="#actividades">Actividades</a></li>
       <li><a href="#publicaciones">Publicaciones</a></li>
+      <li><a href="#comparativa">Comparativa</a></li>
       <li><a href="#impacto">Impacto</a></li>
       <li><a href="#distinciones">Distinciones</a></li>
     </ul>
@@ -201,7 +221,7 @@
       <div class="metric"><div class="num">14</div><div class="lbl">Tesis asesoradas / dirigidas</div></div>
       <div class="metric"><div class="num">12</div><div class="lbl">Cursos impartidos</div></div>
       <div class="metric"><div class="num">10+</div><div class="lbl">Proyectos de investigación</div></div>
-      <div class="metric"><div class="num">07</div><div class="lbl">Publicaciones / capítulos</div></div>
+      <div class="metric"><div class="num">06</div><div class="lbl">Publicaciones / capítulos</div></div>
       <div class="metric"><div class="num">2</div><div class="lbl">Distinciones (SNII y SEI)</div></div>
     </div>
 
@@ -262,7 +282,7 @@
           <div class="act"><div class="n">20</div><div class="body"><div class="title">Proyecto Cuenca del río Mololoa <span class="badge">Proyecto · Concluido</span></div><div class="desc">Implicaciones del cambio de uso de suelo en la escorrentía superficial · SIP22-128, UAN.</div></div></div>
           <div class="act"><div class="n">21</div><div class="body"><div class="title">1er Congreso Nacional de SIG <span class="badge">Ponencia Magistral</span></div><div class="desc">Escenarios de crecimiento urbano futuro: Zona metropolitana de Nayarit · ECOSUR Villahermosa.</div></div></div>
           <div class="act"><div class="n">22</div><div class="body"><div class="title">1er Congreso Nacional de SIG <span class="badge">Organizador</span></div><div class="desc">ECOSUR, Unidad Villahermosa.</div></div></div>
-          <div class="act"><div class="n">23</div><div class="body"><div class="title">Proyecto jóvenes cafetaleros <span class="badge">Proyecto · Concluido</span></div><div class="desc">Estudio comparativo Colombia, México, Perú y Brasil (SIP19-111, UAN). → Artículo en revista <em>Ecologies</em> (MDPI).</div></div></div>
+          <div class="act"><div class="n">23</div><div class="body"><div class="title">Proyecto jóvenes cafetaleros <span class="badge">Proyecto · Concluido</span></div><div class="desc">Retos y oportunidades en jóvenes cafetaleros: Estudio comparativo Colombia, México, Perú y Brasil (SIP19-111, UAN).</div></div></div>
           <div class="act"><div class="n">24</div><div class="body"><div class="title">Dirección de Tesis (Maestría) <span class="badge">Grado 15/dic/2025</span></div><div class="desc">Análisis de aptitud de recursos de turismo alternativo en Compostela, Nayarit · UAN.</div></div></div>
           <div class="act"><div class="n">25</div><div class="body"><div class="title">2º Congreso Nacional de Investigación Vinculada <span class="badge">Ponente</span></div><div class="desc">Cambio de cobertura y uso de suelo · Área Luis Gil Pérez, Centro, Tabasco · UIET.</div></div></div>
           <div class="act"><div class="n">26</div><div class="body"><div class="title">2º Congreso Nacional de Investigación Vinculada <span class="badge">Ponente</span></div><div class="desc">Cambio de uso de suelo en la laguna La Encantada, Centro, Tabasco · UIET.</div></div></div>
@@ -380,7 +400,7 @@
       <div class="card reveal"><div class="icon">📚</div><h3>Docencia en Cursos</h3><p>Impartición y participación en 12 cursos de la maestría y el doctorado, con enfoque en teledetección, SIG, gestión de cuencas y estudios socioambientales, fortaleciendo la planta docente del posgrado.</p><span class="count">12 cursos</span></div>
       <div class="card reveal"><div class="icon">📣</div><h3>Divulgación</h3><p>Más de 20 ponencias, conferencias magistrales y foros en instituciones nacionales e internacionales, difundiendo los resultados de la investigación territorial y ambiental del sureste de México.</p><span class="count">20+ ponencias</span></div>
       <div class="card reveal"><div class="icon">🗺️</div><h3>Proyectos de Investigación</h3><p>Participación en más de 10 proyectos financiados (ECOSUR, CONAHCYT, municipios, UAN, UJAT, CCYTET), incluyendo el Plan Estatal Hídrico y las Unidades de Gestión Hídrica de Tabasco.</p><span class="count">10+ proyectos</span></div>
-      <div class="card reveal"><div class="icon">📖</div><h3>Publicaciones</h3><p>Artículos científicos, un libro de ECOSUR sobre aplicaciones de SIG y capítulos de libro para el Fondo Editorial del Municipio Centro, difundiendo el conocimiento generado.</p><span class="count">07 publicaciones / capítulos</span></div>
+      <div class="card reveal"><div class="icon">📖</div><h3>Publicaciones</h3><p>Artículos científicos, un libro de ECOSUR sobre aplicaciones de SIG y capítulos de libro para el Fondo Editorial del Municipio Centro, difundiendo el conocimiento generado.</p><span class="count">06 publicaciones / capítulos</span></div>
       <div class="card reveal"><div class="icon">⚖️</div><h3>Evaluación y Arbitraje</h3><p>Evaluación de estancias posdoctorales CONAHCYT, revisión de artículos para revistas nacionales e internacionales, evaluación de productividad y coordinación de comités científicos.</p><span class="count">Evaluador de CONAHCYT y revistas</span></div>
       <div class="card reveal"><div class="icon">🏆</div><h3>Reconocimientos</h3><p>Ingreso al Sistema Nacional de Investigadores (SNII Nivel 1) y al Sistema Estatal de Investigadores de Tabasco, reconociendo la trayectoria y productividad científica.</p><span class="count">SNII Nivel 1 · SEI Tabasco</span></div>
       <div class="card reveal"><div class="icon">🤝</div><h3>Vinculación Comunitaria</h3><p>Trabajo cercano con comunidades como la Villa Luis Gil Pérez: ordenamiento territorial, gestión socioterritorial (Sosterritorio), foros del Plan Hídrico y eventos de participación comunitaria.</p><span class="count">Proyecto Sosterritorio</span></div>
@@ -398,7 +418,6 @@
     </div>
     <div class="grid grid-2">
       <div class="pub reveal"><span class="ptype">Libro · ECOSUR</span><h4>Aplicaciones de Sistemas de Información Geográfica en el análisis ambiental y territorial del sureste de México</h4><p>E-ISBN 978-970-96646-9-0 · Publicado por ECOSUR.</p><a href="https://biblioteca.ecosur.mx/cgi-bin/koha/opac-retrieve-file.pl?id=e75a590b4458e21ce0f99364610c0f59" target="_blank" rel="noopener">Ver publicación ↗</a></div>
-      <div class="pub reveal"><span class="ptype">Artículo · MDPI</span><h4>Potential Coffee Distribution in a Central-Western Region of Mexico</h4><p>Derivado del proyecto jóvenes cafetaleros (Colombia, México, Perú y Brasil) · Revista <em>Ecologies</em> (MDPI).</p></div>
       <div class="pub reveal"><span class="ptype">Artículo · Gestión</span><h4>Influencia de los cambios de cobertura sobre los parámetros de calidad del suelo en la subcuenca río Puxcatán</h4><p>Cupil R.L.R., Rodríguez O.L., Ramos R.R. y Avalos J.A. (2024) · Revista <em>Gestión</em>, 2(2).</p><a href="https://revistap.ejeutap.edu.co/index.php/Gestion/article/view/170" target="_blank" rel="noopener">Ver publicación ↗</a></div>
       <div class="pub reveal"><span class="ptype">Artículo · Local Environment</span><h4>Perceptions of tropical urban and peri-urban lagoons in the Gulf of Mexico coastal plain: a public ecosystem services study</h4><p>Rubio-Polania, J.C., et al. con Avalos-Jiménez, A. (2025) · <em>Local Environment</em>.</p><a href="https://doi.org/10.1080/13549839.2024.2447763" target="_blank" rel="noopener">DOI ↗</a></div>
       <div class="pub reveal"><span class="ptype">Capítulos · FEMC</span><h4>Academia y gobierno para el desarrollo sustentable de Centro</h4><p>Tres capítulos (Diagnóstico espacial de lagunas, Lagunas como estrategia para regular inundaciones y Diagnóstico de lagunas rurales) · Fondo Editorial del Municipio Centro · ISBN 978-607-69867-6-9.</p><a href="https://drive.google.com/file/d/1hT36xB_3bFw59YERun_WiaBg6QzTBABg/view" target="_blank" rel="noopener">Ver ↗</a></div>
@@ -422,6 +441,49 @@
       <div class="impact-box reveal"><h4>🤝 Vinculación con el entorno</h4><p>El proyecto <strong>Sosterritorio</strong> y los foros comunitarios en Villa Luis Gil Pérez sitúan al posgrado como referente en la gestión participativa del territorio, conectando la investigación con las necesidades de las comunidades y los gobiernos locales.</p></div>
       <div class="impact-box reveal"><h4>🏅 Reconocimiento institucional</h4><p>El ingreso al <strong>SNII (Nivel 1)</strong> y al <strong>Sistema Estatal de Investigadores</strong> refleja la consolidación profesional y eleva el prestigio y la productividad de la unidad de investigación.</p></div>
       <div class="impact-box reveal"><h4>📚 Generación de conocimiento</h4><p>Publicación de un libro de ECOSUR, capítulos para editoriales municipales y artículos en revistas nacionales e internacionales, colocando los resultados de la estancia al alcance de la comunidad científica y de los tomadores de decisión.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TABLA COMPARATIVA ===================== -->
+<section id="comparativa">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Panorama general</span>
+      <h2>Actividades por año y tipo</h2>
+      <p>Comparativa del número de actividades realizadas cada año, organizadas por tipo de actividad.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>Tipo de actividad</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>2026</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-label">🎓 Dirección y asesoría de tesis</td><td>1</td><td>1</td><td>1</td><td>4</td><td>3</td><td class="today">10</td></tr>
+          <tr><td class="row-label">📚 Docencia en cursos</td><td>1</td><td>4</td><td>2</td><td>4</td><td>0</td><td class="today">11</td></tr>
+          <tr><td class="row-label">📣 Divulgación</td><td>4</td><td>6</td><td>7</td><td>4</td><td>0</td><td class="today">21</td></tr>
+          <tr><td class="row-label">🗺️ Proyectos de investigación</td><td>0</td><td>3</td><td>4</td><td>4</td><td>4</td><td class="today">15</td></tr>
+          <tr><td class="row-label">📖 Publicaciones, libros y capítulos</td><td>0</td><td>0</td><td>3</td><td>2</td><td>4</td><td class="today">9</td></tr>
+          <tr><td class="row-label">⚖️ Evaluación y arbitraje</td><td>3</td><td>3</td><td>1</td><td>2</td><td>0</td><td class="today">9</td></tr>
+          <tr><td class="row-label">🤝 Eventos y organización</td><td>0</td><td>1</td><td>0</td><td>2</td><td>1</td><td class="today">4</td></tr>
+          <tr><td class="row-label">🏆 Distinciones</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td class="today">2</td></tr>
+          <tr><td class="row-label">💬 Asesorías generales</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td class="today">3</td></tr>
+          <tr class="total-row"><td class="row-label">Total / año</td><td class="highlight">9</td><td class="highlight">18</td><td class="highlight">18</td><td class="highlight">26</td><td class="highlight">13</td><td class="highlight">84</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend reveal">
+      <span>📅 Total de actividades registradas: <strong>84</strong> en 4 años</span>
+      <span>🎯 Mayor actividad en <strong>2025</strong> (26 actividades)</span>
+      <span>🗺️ Línea más constante: <strong>Proyectos de investigación</strong></span>
     </div>
   </div>
 </section>
